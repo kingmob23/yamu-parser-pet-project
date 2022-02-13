@@ -2,4 +2,6 @@
 
 Используемые библиотеки: requests, bs4
 
-Кормить ссылками формата https://music.yandex.com/users/ "ИМЯ ПОЛЬЗОВАТЕЛЯ" /playlists/ "НОМЕР ПЛЕЙЛИСТА"
+Обернуто в REST API на Flask
+
+Отправлять POST запрос на /links с ссылкой в теле запроса формата https://music.yandex.ru/users/ "ИМЯ ПОЛЬЗОВАТЕЛЯ" /playlists/ "НОМЕР ПЛЕЙЛИСТА"
