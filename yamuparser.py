@@ -3,9 +3,8 @@ from bs4 import BeautifulSoup
 import json
 
 
-def yamuparser():
-    URL = input('Вставь ссылку на плейлист ')
-    r = requests.get(URL)
+def yamuparser(link):
+    r = requests.get(link)
 
     soup = BeautifulSoup(r.content, 'html.parser')
     rawdata = soup.body.script.string
@@ -28,6 +27,4 @@ def yamuparser():
         playlist += temp1.get('name')
         playlist += '\n'
 
-    print(playlist)
-
-yamuparser()
+    return playlist
